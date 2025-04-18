@@ -3,13 +3,12 @@
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/aws-lambda": "^8.10.119",
+    "serverless": "^4.14.0",
+    "serverless-offline": "^14.4.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "serverless": "^4.14.0",
-    "serverless-offline": "^14.4.0"
   }
 }
