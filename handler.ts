@@ -3,9 +3,10 @@ import type { APIGatewayProxyEvent, APIGatewayProxyResult } from "aws-lambda";
 export const hello = async (
   event: APIGatewayProxyEvent
 ): Promise<APIGatewayProxyResult> => {
-  console.log("Event:", JSON.stringify(event, null, 2));
+  const name = event.queryStringParameters?.name || "world";
+
   return {
     statusCode: 200,
-    body: JSON.stringify({ message: "Hello, world!" }),
+    body: JSON.stringify({ message: `Hello, ${name}!` }),
   };
 };
