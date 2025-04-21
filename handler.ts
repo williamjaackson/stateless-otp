@@ -10,3 +10,14 @@ export const hello = async (
     body: JSON.stringify({ message: `Hello, ${name}!` }),
   };
 };
+
+export const generateOTP = async (
+  event: APIGatewayProxyEvent
+): Promise<APIGatewayProxyResult> => {
+  const name = event.queryStringParameters?.name || "world";
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ message: `Hello, ${name}!` }),
+  };
+};
